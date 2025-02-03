@@ -17,8 +17,10 @@ module.exports = {
                     group = "Arms";
                 } else if (["quadriceps", "hamstrings", "calves", "glutes"].includes(workout.muscle)) {
                     group = "Legs";
-                } else if (["chest", "lats", "middle_back", "lower_back"].includes(workout.muscle)) {
-                    group = "Chest & Back";
+                } else if (["chest"].includes(workout.muscle)) {
+                    group = "Chest";
+                } else if (["lats", "middle back", "lower back"].includes(workout.muscle)) {
+                    group = "Back";
                 } else if (["shoulders", "traps"].includes(workout.muscle)) {
                     group = "Shoulders";
                 } else {
@@ -138,6 +140,13 @@ module.exports = {
             console.error("Error updating profile:", err);
             res.status(500).json({ success: false, message: "Failed to update profile" });
         }
+    },
+    getAbout: async (req, res) => {
+        try {
+            res.render("about"); // about.ejs in the views folder
+        } catch (err) {
+            console.error("Error loading about page:", err);
+            res.redirect("/home");
+        }
     }
-    
 };

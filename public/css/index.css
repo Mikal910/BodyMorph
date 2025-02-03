@@ -2,7 +2,7 @@
 body {
     background: linear-gradient(-45deg, #b3b3b3, #808080, #4d4d4d, #1a1a1a); /* Gray gradient colors */
     background-size: 300% 300%; /* Smooth animation */
-    animation: gradientAnimation 5s ease infinite; /* Continuous animation */
+    animation: gradientAnimation 8s ease infinite; /* Continuous animation */
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
@@ -55,7 +55,7 @@ header h1 {
     color: #ffffff; /* Start with white text */
     background: linear-gradient(to right, #ffffff, #808080); /* Subtle gradient */
     background-clip: text;
-    -webkit-background-clip: text; /* WebKit compatibility */
+    -webkit-background-clip: text; /* WebKit compatibility  Clip the background to the text*/
     -webkit-text-fill-color: transparent; /* WebKit-specific text fill */
     
     position: relative;

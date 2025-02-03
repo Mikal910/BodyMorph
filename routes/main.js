@@ -21,5 +21,5 @@ router.get("/home", ensureAuth, profileController.getHome); // Home Page
 router.get("/myexercise", ensureAuth, profileController.getMyExercise); // Display Saved Workouts
 router.delete("/deleteworkout/:id", ensureAuth, profileController.deleteWorkout); // Delete Workout
 router.put("/saveworkout", ensureAuth, profileController.saveWorkout); // Save Workout
-
+router.get("/about", ensureAuth, profileController.getAbout); // About Page
 module.exports = router;

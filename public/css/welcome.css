@@ -1,0 +1,27 @@
+/* Center the welcome message */
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.welcome-container h1 {
+    font-size: 48px;
+    margin: 0;
+    animation: fadeIn 1.5s ease-in-out; /* Optional fade-in animation */
+}
+
+/* Optional Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
